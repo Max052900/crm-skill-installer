@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>客户沟通要点</title>
+  <style>
+    :root{--ink:#17212b;--navy:#1c3a5e;--muted:#65717d;--line:#d9e0e7;--paper:#fff;--wash:#f4f7fa}
+    *{box-sizing:border-box}
+    body{margin:0;background:#e9edf1;color:var(--ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif}
+    .sheet{width:min(920px,calc(100% - 32px));margin:32px auto;padding:52px 58px;background:var(--paper);box-shadow:0 12px 36px #20304020}
+    .eyebrow{color:var(--navy);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:8px 0 4px;font:700 30px/1.25 Georgia,"Songti SC",serif;color:var(--navy)}
+    .subject{margin:0 0 24px;color:var(--muted)}
+    .meta{display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 34px;border:1px solid var(--line);background:var(--wash)}
+    .meta div{padding:10px 12px;border-right:1px solid var(--line)}
+    .meta div:last-child{border-right:0}
+    dt{color:var(--muted);font-size:11px}dd{margin:2px 0 0;font-weight:600}
+    section{margin:28px 0}.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}.sec-head h2{margin:0;color:var(--navy);font:700 20px Georgia,"Songti SC",serif}.rule{height:1px;flex:1;background:var(--line)}
+    .assess{padding:18px 20px;border-left:4px solid var(--navy);background:var(--wash)}
+    .verdict{margin-top:12px;padding:10px 12px;background:#eaf0f7;font-weight:700}
+    table{width:100%;border-collapse:collapse;font-size:13px}th{padding:9px 10px;background:var(--navy);color:#fff;text-align:left}td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#fafbfd}.num{text-align:right;font-variant-numeric:tabular-nums}.tag{display:inline-block;padding:2px 7px;border-radius:999px;background:#eaf0f7;color:var(--navy);font-size:11px;font-weight:700}
+    footer{display:flex;justify-content:space-between;margin-top:36px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}
+    @media(max-width:680px){.sheet{width:100%;margin:0;padding:28px 20px}.meta{grid-template-columns:repeat(2,1fr)}.meta div:nth-child(2){border-right:0}}
+    @media print{@page{size:A4;margin:12mm}body{background:#fff}.sheet{width:auto;margin:0;padding:0;box-shadow:none}section,table{break-inside:avoid}}
+  </style>
+</head>
+<body>
+<main class="sheet">
+  <!-- 所有字段均为占位符；生成时替换，不要把真实客户数据提交回模板。 -->
+  <header>
+    <div class="eyebrow">客户沟通要点 · Client Communication Memo</div>
+    <h1>【填写：企业简称】· 客户沟通要点</h1>
+    <p class="subject">主体：<strong>【填写：企业全称】</strong>（法定代表人：【填写】）</p>
+    <dl class="meta">
+      <div><dt>依据材料</dt><dd>【填写】</dd></div>
+      <div><dt>统计期间</dt><dd>【填写】</dd></div>
+      <div><dt>制表日期</dt><dd>【填写】</dd></div>
+      <div><dt>资料缺口</dt><dd>【填写】</dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>判断</h2><span class="rule"></span></div>
+    <div class="assess">
+      <p>【填写：经营与征信底子、最先影响判断的瑕疵、调整方向。】</p>
+      <p>【填写：为什么该事项优先，以及补到材料后判断如何变化。】</p>
+      <div class="verdict">【填写：优质户，优先跟 / 正常户，按流程推 / 有机会，看看 / 放弃】</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>关键信息</h2><span class="rule"></span></div>
+    <table>
+      <thead><tr><th>指标</th><th>数据</th><th>期间与来源</th></tr></thead>
+      <tbody>
+        <tr><td>主营业务</td><td>【填写】</td><td>【填写】</td></tr>
+        <tr><td>对公营收</td><td class="num">【填写】</td><td>【填写】</td></tr>
+        <tr><td>私人账营收</td><td class="num">【填写：个人银行卡 + 微信】</td><td>【填写】</td></tr>
+        <tr><td>合计可识别营收</td><td class="num">【填写】</td><td>【填写】</td></tr>
+        <tr><td>企业直接负债</td><td class="num">【填写】</td><td>【填写】</td></tr>
+        <tr><td>个人相关责任</td><td class="num">【填写】</td><td>【填写】</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>待补资料</h2><span class="rule"></span></div>
+    <table>
+      <thead><tr><th>优先级</th><th>资料或动作</th><th>拿到后能确定什么</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tag">最关键</span></td><td>【填写】</td><td>【填写】</td></tr>
+        <tr><td><span class="tag">重要</span></td><td>【填写】</td><td>【填写】</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>需要留意的信息</h2><span class="rule"></span></div>
+    <table>
+      <thead><tr><th>类别</th><th>客观数据</th><th>优化方向</th></tr></thead>
+      <tbody>
+        <tr><td>【填写】</td><td>【填写】</td><td>【填写】</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer><span>CRM Skill · 客户沟通要点</span><span>【填写：页码或日期】</span></footer>
+</main>
+</body>
+</html>
