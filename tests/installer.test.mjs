@@ -9,6 +9,12 @@ import { getStatus, installSkill } from '../lib/installer.mjs';
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const payloadDir = join(packageRoot, 'payload', 'crm');
 
+test('GitHub 安装包不使用 postinstall 写入用户目录', () => {
+  const packageJson = JSON.parse(readFileSync(join(packageRoot, 'package.json'), 'utf8'));
+  assert.equal(packageJson.scripts?.postinstall, undefined);
+  assert.equal(packageJson.bin?.['crm-skill'], 'bin/crm-skill.mjs');
+});
+
 test('安装 CRM skill，并为 Codex 与 Claude Code 创建共享桥接', () => {
   const home = mkdtempSync(join(os.tmpdir(), 'crm-skill-install-'));
   try {
