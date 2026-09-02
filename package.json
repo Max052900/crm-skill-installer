@@ -1,6 +1,6 @@
 {
   "name": "crm-skill-installer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "通过 npm 或 npx 安装对公客户经理 CRM skill 到 Codex 和 Claude Code。",
   "private": true,
   "type": "module",

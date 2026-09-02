@@ -13,6 +13,10 @@ test('GitHub 安装包不使用 postinstall 写入用户目录', () => {
   const packageJson = JSON.parse(readFileSync(join(packageRoot, 'package.json'), 'utf8'));
   assert.equal(packageJson.scripts?.postinstall, undefined);
   assert.equal(packageJson.bin?.['crm-skill'], 'bin/crm-skill.mjs');
+
+  const readme = readFileSync(join(packageRoot, 'README.md'), 'utf8');
+  assert.match(readme, /releases\/download\/v1\.0\.2\/crm-skill-installer-1\.0\.2\.tgz/);
+  assert.doesNotMatch(readme, /(?:--package=|install -g )github:/);
 });
 
 test('安装 CRM skill，并为 Codex 与 Claude Code 创建共享桥接', () => {
